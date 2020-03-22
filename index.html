@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Luxina's Gallery{% endblock %}
+{% block home_active %}active{% endblock %}
+
+{% block body %}
+{% load static %}
+    <div class="container">
+        <div class="jumbotron">
+            <div class="logo">Luxina's Gallery</div>
+            <div class="row">
+                <div class="col-md-7">
+                    <p class="lead hometext">{{ home_content.text_content }}</p>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="image" style="background-image: url({{ home_content.graphic_content.url }})"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <p><a class="btn btn-lg btn-success" href="{% url 'gallery:showroom' %}" role="button">Show Room</a></p>
+                </div>
+            </div>
+
+
+        </div> <!-- jumbotron -->
+
+        <div class="row marketing">
+
+        </div> <!-- row -->
+    </div> <!-- container -->
+
+{% endblock %}
+
